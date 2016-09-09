@@ -39,6 +39,7 @@
         $me->add_grade(97);
         $students['a009'] = $me;
 
+        // sort students by grade
         ksort($students);
 
         foreach ($students as $student)
