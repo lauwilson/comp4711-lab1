@@ -17,14 +17,33 @@ class Student {
         $this->grades = array();
     }
 
+    /**
+     * Adds an email address to the student's emails list.
+     *
+     * Parameters
+     * $which:      the type of email address.
+     * $address:    the URI of the email address.
+     */
     function add_email($which, $address) {
         $this->emails[$which] = $address;
     }
 
+    /**
+     * Adds an course grade to the student's record.
+     *
+     * Parameters
+     * $grade:    the percentage grade the student received in class.
+     */
     function add_grade($grade) {
         $this->grades[] = $grade;
     }
 
+    /**
+     * Gets the student's current course average.
+     *
+     * Returns:
+     *  The student's current average grade across all courses.
+     */
     function average() {
         $total = 0;
         foreach ($this->grades as $value)
@@ -32,6 +51,13 @@ class Student {
         return $total / count($this->grades);
     }
 
+    /**
+     * A string representation of the Student object.
+     *
+     * Returns:
+     *  A string representation of the Student which highlights the name,
+     *  average grade, and list of emails.
+     */
     function toString() {
         $result = $this->first_name . ' ' . $this->surname;
         $result .= ' (' . $this->average() . ")\n";
