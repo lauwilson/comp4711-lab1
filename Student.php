@@ -1,4 +1,13 @@
 <?php
+
+/**
+* Class which represents a Student
+* object parameters:
+* surname:      The Student's surname.
+* first_name:   The Student's first name.
+* emails:       An array of the student's Emails.
+* grades:       An array of grades obtained by student.
+*/
 class Student {
 
     function __construct() {
