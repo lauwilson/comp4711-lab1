@@ -6,7 +6,9 @@
     </head>
     <body>
         <?php
-            echo "Hello out there.";
+        include('student.php');
+        foreach ($students as $student)
+            echo $student->toString();
         ?>
     </body>
 </html>
